@@ -3,7 +3,10 @@ import { ThemeProvider, createTheme } from "@mui/material/styles";
 import CssBaseline from "@mui/material/CssBaseline";
 import { outlinedInputClasses } from '@mui/material/OutlinedInput';
 import { AppBarItem } from "./components/header/AppBarItem";
-import { SearchBarItem } from "./components/searchBar/searchBarItem";
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { HomePage } from "./screens/HomePage";
+import { CountryDetails } from "./components/countryDetails/CountryDetails";
+
 
 export default function App() {
 
@@ -73,9 +76,14 @@ export default function App() {
 
   return (
     <ThemeProvider theme={toggleDarkMode ? themeDark : themeLight}>
-      <CssBaseline />
-      <AppBarItem darkMode={toggleDarkMode} onToggleDarkMode={toggleDarkTheme} />
-      <SearchBarItem />
-    </ThemeProvider>
+    <CssBaseline />
+    <AppBarItem darkMode={toggleDarkMode} onToggleDarkMode={toggleDarkTheme} />
+    <Router>
+      <Routes>
+        <Route path="/" element={<HomePage darkMode={toggleDarkMode} />} />
+        <Route path="/country/:countryCode" element={<CountryDetails />} />
+      </Routes>
+    </Router>
+  </ThemeProvider>
   )
 }

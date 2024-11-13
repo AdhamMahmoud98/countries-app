@@ -1,0 +1,20 @@
+.search-bar-container {
+    display: flex;
+    margin-top: 1rem;
+    box-shadow: 10;
+    border: none;
+  }
+  
+  .mobile-search-bar {
+    width: 90%;
+    min-width: 343px;
+    justify-content: center;
+    margin-left: 0;
+  }
+  
+  .desktop-search-bar {
+    width: 480px;
+    min-width: 480px;
+    justify-content: flex-start;
+    margin-left: 3.5rem;
+  }

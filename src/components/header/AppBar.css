@@ -1,0 +1,31 @@
+.app-bar-title {
+  font-size: 200px;
+  margin-left: 2rem;
+}
+
+.mobile-title {
+  font-size: 16px;
+  margin-left: 0;
+}
+
+.desktop-title {
+    font-size: 200px;
+    margin-left: '15rem';
+    background-color: aqua;
+}
+
+.icon {
+  font-size: 24px;
+}
+
+.mobile-icon {
+  font-size: 18px;
+}
+
+.button-text {
+  font-size: 14px;
+}
+
+.mobile-text {
+  font-size: 12px;
+}
