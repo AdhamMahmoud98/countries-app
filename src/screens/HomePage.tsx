@@ -1,10 +1,10 @@
 import React from "react";
 import Box from '@mui/material/Box';
-import { SearchBarItem } from "../components/searchBar/SearchBarItem";
 import { DropDownMenu } from "../components/dropdownMenu/DropDownMenu";
 import { CountriesList } from "../components/countriesList/CountriesList";
 import { useMediaQuery, useTheme } from '@mui/material';
 import { useCountriesList } from "../hooks/useCountriesList";
+import { SearchBarItem } from "../components/searchBar/searchBarItem";
 
 interface Props {
   darkMode: boolean;

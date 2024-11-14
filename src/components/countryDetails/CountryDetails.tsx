@@ -23,7 +23,7 @@ const CountryDetails = () => {
     topLevelDomain,
     currencies,
     languages,
-    borderCountries,
+    borders,
   } = country;
 
   return (
@@ -84,16 +84,16 @@ const CountryDetails = () => {
           </Grid>
 
           {/* Border Countries */}
-          <Box mt={3}>
+          {borders?.length > 0 && <Box mt={3}>
             <Typography variant="subtitle1" fontWeight="bold" gutterBottom>
               Border Countries:
             </Typography>
             <Box display="flex" flexWrap="wrap" gap={1}>
-              {borderCountries?.map((countryCode: string) => (
+              {borders?.map((countryCode: string) => (
                 <Chip key={countryCode} label={countryCode} variant="outlined" />
               ))}
             </Box>
-          </Box>
+          </Box>}
         </Grid>
       </Grid>
     </Box>
